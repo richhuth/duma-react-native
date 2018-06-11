@@ -1,3 +1,12 @@
-/**
- * Created by richard on 2018/05/08.
- */
+export default {
+
+  weekdays:[
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat',
+    'Sun'
+  ]
+}

@@ -1,0 +1,48 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.3.2/libexec/bin/yarn.js
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  6.11.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "private": true,
+    "scripts": {
+      "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    },
+    "jest": {
+      "preset": "jest-expo"
+    },
+    "dependencies": {
+      "@expo/samples": "2.1.1",
+      "expo": "^25.0.0",
+      "firebase": "^4.12.0",
+      "react": "16.2.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+      "react-native-render-html": "^3.9.3",
+      "react-navigation": "^1.0.0-beta.27"
+    },
+    "devDependencies": {
+      "jest-expo": "^25.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz: unexpected end of file
+      at Zlib._handle.onerror (zlib.js:370:17)
