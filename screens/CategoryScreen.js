@@ -1,7 +1,9 @@
 import React from 'react';
-import { ScrollView, StyleSheet, FlatList, ActivityIndicator, Text, View, Image, ImageBackground, TouchableHighlight,RefreshControl  } from 'react-native';
+import { ScrollView, StyleSheet, FlatList, ActivityIndicator, Text, View, Image, ImageBackground, TouchableHighlight,RefreshControl, Button  } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import HTML from 'react-native-render-html';
+
+
 
 export default class CategoryScreen extends React.Component {
 
@@ -71,7 +73,7 @@ export default class CategoryScreen extends React.Component {
 
 
   static navigationOptions = {
-    title: 'THIS WEEK',
+    title: 'THIS WEEEK',
   };
 
   render(){

@@ -9,10 +9,7 @@ import LoginScreen from '../screens/LinksScreen';
 import ForgotPasswordScreen from '../screens/auth/ForgotPasswordScreen';
 import SignupScreen from '../screens/auth/SignupScreen';
 import CategoryScreen from '../screens/CategoryScreen';
-
-
-
-
+import MapScreen from '../screens/MapScreen';
 
 
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
@@ -25,7 +22,8 @@ const RootStackNavigator = StackNavigator(
     Login: {screen : LoginScreen},
     Signup: {screen: SignupScreen},
     ForgotPassword: {screen: ForgotPasswordScreen},
-    Category: {screen: CategoryScreen}
+    Category: {screen: CategoryScreen},
+    MapScreen: {screen: MapScreen}
   },
   {
     navigationOptions: () => ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, FlatList, ActivityIndicator, Text, View, Image, ImageBackground, TouchableHighlight,RefreshControl  } from 'react-native';
+import { ScrollView, StyleSheet, FlatList, ActivityIndicator, Text, View, Image, ImageBackground, TouchableHighlight,RefreshControl, Button, Vibration  } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import HTML from 'react-native-render-html';
 
@@ -65,12 +65,31 @@ export default class LinksScreen extends React.Component {
 
   navigateToScreen = (item) => {
     this.props.navigation.navigate('Preview',{data:item})
+    Vibration.vibrate(300);
   }
+
+  goTopMap(){
+    this.props.navigation.navigate('MapScreen')
+  }
+
 
 
   static navigationOptions = {
     title: 'THIS WEEK',
+    headerRight: (
+      <Button
+        onPress={{}}
+        title="Map"
+        color="#fff"
+      />
+    ),
   };
+
+
+
+
+
+
 
   render(){
 

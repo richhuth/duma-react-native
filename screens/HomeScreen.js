@@ -16,15 +16,16 @@ import Categories from '../constants/Categories';
 
 import { MonoText } from '../components/StyledText';
 
-import exibitions from '../assets/images/categories/exhibitions.jpg';
-import filmClub from '../assets/images/categories/film-club.jpg';
+import exibitions from '../assets/images/categoryPics/exhibitions.jpg';
+import filmClub from '../assets/images/categoryPics/film-club.jpg';
 
 
 
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'CATEGORIES'
+    title: 'CATEGORIES',
+
   };
 
 
@@ -46,7 +47,7 @@ return(
       Categories.categories.map((cat, i) => {
 
 
-        let width = i === 0 ? 360 : 175;
+        let width = i === 0 || i === 1 ? 360 : 175;
 
 
 
@@ -54,7 +55,7 @@ return(
 
 
           <TouchableHighlight key={i} onPress={() => this.navigateToScreen(Object.values(cat[1]))}><View><ImageBackground
-            style={{width:width, height: 210, opacity:0.9, margin:5,
+            style={{width:width, height: 180, opacity:0.9, margin:5,
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',}}

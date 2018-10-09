@@ -10,6 +10,7 @@ import Colors from '../constants/Colors';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import LoginScreen from '../screens/auth/LoginScreen';
+import MapScreen from '../screens/MapScreen2';
 
 import SettingsScreen from '../screens/SettingsScreen';
 import Drawer from '../screens/Drawer';
@@ -27,9 +28,12 @@ const MyTabNavigator =TabNavigator(
     Links: {
       screen: HomeScreen ,
     },
-    Settings: {
-      screen: LoginScreen,
+    Map: {
+      screen: MapScreen
     },
+    Settings: {
+    screen: LoginScreen,
+  }
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -40,15 +44,18 @@ const MyTabNavigator =TabNavigator(
           case 'Home':
             iconName =
               Platform.OS === 'ios'
-                ? `ios-information-circle${focused ? '' : '-outline'}`
+                ? `ios-calendar${focused ? '' : '-outline'}`
                 : 'md-information-circle';
             break;
           case 'Links':
-            iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
+            iconName = Platform.OS === 'ios' ? `ios-book${focused ? '' : '-outline'}` : 'md-link';
+            break;
+          case 'Map':
+            iconName = Platform.OS === 'ios' ? `ios-map${focused ? '' : '-outline'}` : 'md-link';
             break;
           case 'Settings':
             iconName =
-              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+              Platform.OS === 'ios' ? `ios-settings${focused ? '' : '-outline'}` : 'md-options';
         }
         return (
           <Ionicons

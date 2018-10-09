@@ -4,27 +4,10 @@ import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
 import RootNavigation from './navigation/RootNavigation';
 
-
-
-
-
-
-
-
-
-
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
-
-  componentWillMount(){
-
-
-
-  }
-
-
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
